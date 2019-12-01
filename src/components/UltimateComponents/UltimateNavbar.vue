@@ -2,7 +2,7 @@
   <nav :class="navClass" class="w-full flex items-center text-black">
     <!-- DESKTOP --->
     <div class="hidden md:flex items-center font-display w-full">
-      <img class="w-20 ml-8 my-4" src="../assets/logo.png" alt>
+      <img class="w-20 ml-16 my-4" src="@/assets/logo.png" alt />
       <!-- Links --->
       <div class="ml-6 hover:text-gray" v-for="(link, index) in links" :key="index">
         <a
@@ -27,7 +27,7 @@
     <!-- MOBILE -->
     <div class="md:hidden flex flex-col w-full z-10">
       <div class="full-w flex flex-row justify-between bg-white">
-        <img class="w-10 ml-4 my-4" src="../assets/logo.png" alt>
+        <img class="w-10 ml-4 my-4" src="@/assets/logo.png" alt />
         <!-- burger toogle part-->
         <div @click="navToggle" class="ml-4 flex items-center flex-shrink-0 text-white">
           <svg
@@ -40,9 +40,9 @@
           >
             <path
               d="M64 384h384v-42.666H64V384zm0-106.666h384v-42.667H64v42.667zM64 128v42.665h384V128H64z"
-            ></path>
+            />
           </svg>
-          
+
           <svg
             id="cross"
             style="transform: rotate(45deg); fill: #4F6272;"
@@ -53,7 +53,7 @@
           >
             <path
               d="M416 277.333H277.333V416h-42.666V277.333H96v-42.666h138.667V96h42.666v138.667H416v42.666z"
-            ></path>
+            />
           </svg>
         </div>
       </div>

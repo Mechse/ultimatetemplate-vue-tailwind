@@ -1,22 +1,15 @@
 <template>
   <div id="app" class="flex h-full flex-col">
     <UltimateNavbar></UltimateNavbar>
-    <div class="w-full flex-1 p-4">
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </div>
-    <div class="w-full flex-1 p-4">
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </div>
-    <div class="w-full flex-1 p-4">
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </div>
+    <UltimateHero></UltimateHero>
     <UltimateFooter></UltimateFooter>
   </div>
 </template>
 
 <script>
-import UltimateNavbar from "./components/UltimateNavbar";
-import UltimateFooter from "./components/UltimateFooter";
+import UltimateNavbar from "./components/UltimateComponents/UltimateNavbar";
+import UltimateFooter from "./components/UltimateComponents/UltimateFooter";
+import UltimateHero from "./components/UltimateComponents/UltimateHero";
 import MegaMenu from "./components/MegaMenu/MegaMenu";
 
 export default {
@@ -24,7 +17,8 @@ export default {
   components: {
     UltimateNavbar,
     UltimateFooter,
-    MegaMenu
+    MegaMenu,
+    UltimateHero
   }
 };
 </script>
@@ -32,6 +26,5 @@ export default {
 <style>
 #app {
   background-color: #e3e3e3;
-  height: 120vh;
 }
 </style>
