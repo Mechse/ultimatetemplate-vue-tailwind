@@ -2,7 +2,7 @@
 
 <script>
 export default {
-  name: "UltimateCarousel"
+  name: "ElegantContactInformation"
 };
 </script>
 

@@ -1,11 +1,11 @@
 <template>
-  <nav class="w-full mb-4 bg-white flex flex-row justify-between shadow-md">
-    <div class="logo flex items-center p-6 pl-16">
+  <nav class="w-full bg-white flex flex-row justify-between items-center z-10">
+    <div class="logo flex p-6 pl-16 items-center">
       <img class="w-16" src="../../assets/logo.png" alt />
       <p class="logo-text text-xl font-semibold ml-2">Vue JS</p>
     </div>
     <div
-      class="h-full pr-24 navigation flex flex-row justify-around items-center text-lg font-semibold text-gray-700 uppercase"
+      class="h-full pr-24 navigation flex flex-row justify-around text-lg font-semibold text-gray-700 uppercase"
     >
       <div class="navigation-item mx-4">
         <MegaMenuItem
