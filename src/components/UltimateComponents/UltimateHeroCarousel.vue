@@ -1,17 +1,21 @@
 <template>
   <div class="h-screen flex items-center">
-    <div class="glide flex justify-center items-center h-full">
+    <div class="glide-hero glide flex justify-center items-center h-full">
       <div class="glide__track w-screen h-screen" data-glide-el="track">
         <ul class="glide__slides w-full h-full">
           <li
-            v-for="img in backImgs"
-            :key="img"
-            :style="{ 'background-image'  : `url('${img}')` }"
-            class="glide__slide w-full h-full"
+            v-for="(backImg, i) in backImgs"
+            :key="i"
+            :style="{backgroundImage:`url(${getImg(backImg)})`}"
+            class="glide__slide w-full h-full bg-center bg-no-repeat bg-cover"
           ></li>
-          <li class="glide__slide w-full h-full"></li>
-          <li class="glide__slide w-full h-full"></li>
         </ul>
+      </div>
+      <div class="carousel-back-pointer z-10 w-full h-full absolute l-0 t-0">
+        <div class="h-full w-full p-4 md:px-16 text-white flex justify-center flex-col">
+          <h1 class="text-4xl md:text-6xl font-semibold">Ultimate Template</h1>
+          <span class="text-2xl sm:text-2xl md:text-4xl font-medium">This Template is amazing!</span>
+        </div>
       </div>
     </div>
   </div>
@@ -24,19 +28,20 @@ export default {
   name: "UltimateHeroCarousel",
   data() {
     return {
-      backImgs: [
-        "~@/assets/img/1.jpg",
-        "~@/assets/img/2.jpg",
-        "~@/assets/img/3.jpg"
-      ]
+      backImgs: ["1.jpg", "2.jpg", "3.jpg"]
     };
+  },
+  methods: {
+    getImg(path) {
+      return require(`@/assets/img/${path}`);
+    }
   },
   mounted() {
     const config = {
       type: "carousel",
       gap: 0,
       perView: 1,
-      autoplay: 2500,
+      autoplay: 5000,
       hoverpause: false,
       peek: {
         before: 0,
@@ -56,10 +61,13 @@ export default {
       }
     };
 
-    new Glide(".glide", config).mount();
+    new Glide(".glide-hero", config).mount();
   }
 };
 </script>
 
-<style>
+<style scoped>
+.carousel-back-pointer {
+  cursor: default;
+}
 </style>

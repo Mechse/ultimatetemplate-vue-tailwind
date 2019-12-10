@@ -106,13 +106,14 @@ export default {
 
   methods: {
     onScroll() {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 25) {
         this.navClass["bg-transparent"] = false;
         this.navClass["bg-white"] = true;
         this.navClass["z-10000"] = true;
         this.navClass["z-0"] = false;
         this.navClass.fixed = true;
         this.navClass["shadow-lg"] = true;
+        this.navClass["leaveToAnimate"] = true;
       } else {
         this.navClass["bg-transparent"] = true;
         this.navClass["bg-white"] = false;
@@ -120,6 +121,7 @@ export default {
         this.navClass["z-0"] = true;
         this.navClass.fixed = false;
         this.navClass["shadow-lg"] = false;
+        this.navClass["leaveToAnimate"] = false;
       }
     },
     navToggle() {
@@ -149,5 +151,20 @@ export default {
 <style scoped>
 .z-10000 {
   z-index: 10000 !important;
+}
+
+@keyframes leaveAnimation {
+  0% {
+    transform: rotate(0) translateY(-5%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+.leaveToAnimate {
+  animation: leaveAnimation 0.25s 1 0s ease-in;
 }
 </style>

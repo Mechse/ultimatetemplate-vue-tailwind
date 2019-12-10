@@ -1,11 +1,11 @@
 <template>
-  <div class="h-72 flex items-center p-4 md:px-16">
-    <div class="glide flex justify-center items-center h-full">
+  <div class="h-72 flex items-center p-4">
+    <div class="glide glide-carousel flex justify-center items-center h-full">
       <div class="glide__track h-full" data-glide-el="track">
         <ul class="glide__slides h-full">
-          <UltimateCarouselComponent :show-button="true"></UltimateCarouselComponent>
-          <UltimateCarouselComponent></UltimateCarouselComponent>
-          <UltimateCarouselComponent></UltimateCarouselComponent>
+          <UltimateCarouselComponent :show-button="true" backImg="1.jpg"></UltimateCarouselComponent>
+          <UltimateCarouselComponent backImg="2.jpg"></UltimateCarouselComponent>
+          <UltimateCarouselComponent backImg="3.jpg"></UltimateCarouselComponent>
         </ul>
       </div>
       <div class="glide__arrows" data-glide-el="controls">
@@ -29,7 +29,7 @@ export default {
     const config = {
       type: "carousel",
       gap: 10,
-      perView: 3,
+      perView: 2,
       autoplay: 0,
       hoverpause: true,
       peek: {
@@ -50,7 +50,7 @@ export default {
       }
     };
 
-    new Glide(".glide", config).mount();
+    new Glide(".glide-carousel", config).mount();
   }
 };
 </script>

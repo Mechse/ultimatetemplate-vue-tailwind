@@ -2,7 +2,7 @@
   <li class="glide__slide flex justify-center">
     <div
       class="w-full h-full rounded-lg flex items-end justify-end bg-cover bg-center bg-no-repeat"
-      :style="{backgroundImage:`url(${require('@/assets/img/1.jpg')})`}"
+      :style="{backgroundImage:`url(${getImg(backImg)})`}"
     >
       <button
         v-if="showButton"
@@ -15,10 +15,10 @@
 <script>
 export default {
   name: "UltimateCarouselComponent",
-  props: ["showButton"],
+  props: ["showButton", "backImg"],
   methods: {
     getImg(path) {
-      return require(path);
+      return require(`@/assets/img/${path}`);
     }
   }
 };

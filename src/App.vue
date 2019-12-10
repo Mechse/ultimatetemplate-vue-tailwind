@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="flex h-full flex-col">
     <UltimateNavbar></UltimateNavbar>
-    <UltimateHero></UltimateHero>
+    <UltimateHeroCarousel></UltimateHeroCarousel>
     <UltimateCarousel></UltimateCarousel>
     <UltimateFooter></UltimateFooter>
   </div>
