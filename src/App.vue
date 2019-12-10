@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="flex h-full flex-col">
-    <MegaMenu></MegaMenu>
+    <UltimateNavbar></UltimateNavbar>
     <UltimateHero></UltimateHero>
     <UltimateCarousel></UltimateCarousel>
     <UltimateFooter></UltimateFooter>
@@ -11,7 +11,8 @@
 import UltimateNavbar from "./components/UltimateComponents/UltimateNavbar";
 import UltimateFooter from "./components/UltimateComponents/UltimateFooter";
 import UltimateHero from "./components/UltimateComponents/UltimateHero";
-import UltimateCarousel from "./components/UltimateComponents/UltimateCarousel";
+import UltimateHeroCarousel from "./components/UltimateComponents/UltimateHeroCarousel";
+import UltimateCarousel from "./components/UltimateComponents/UltimateCarousel/UltimateCarouselFrame";
 import MegaMenu from "./components/MegaMenu/MegaMenu";
 export default {
   name: "App",
@@ -20,6 +21,7 @@ export default {
     UltimateFooter,
     MegaMenu,
     UltimateHero,
+    UltimateHeroCarousel,
     UltimateCarousel
   }
 };
@@ -27,6 +29,5 @@ export default {
 
 <style>
 #app {
-  background-color: #e3e3e3;
 }
 </style>
